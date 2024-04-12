@@ -1,0 +1,138 @@
+/* FormComponent.css */
+.form-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #fff;
+  border: 4px solid #000;
+}
+
+.user-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex; /* Make form-group a flex container */
+  flex-wrap: wrap; /* Allow items to wrap */
+  margin-bottom: 20px;
+  justify-content: space-between; /* Add space between input and select */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,.form-group select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px; /* Space for error message */
+  border: 4px solid #000;
+  border-radius: 0; /* Square corners to match design */
+  font-size: 1rem;
+}
+
+
+.input-error {
+  border-color: red;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end; /* Aligns buttons to the right */
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: 4px solid #000;
+    background-color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+    text-transform: uppercase;
+    width: auto; /* Makes the button fit its content */
+    margin-left: 10px; /* Adds spacing between buttons */
+    box-shadow: 10px 5px 5px black; /* Adjusted for a more natural shadow */
+  }
+  
+button:hover {
+    background-color: #f0f0f0; /* Slightly darker background on hover */
+}
+.form-actions button:first-child {
+    margin-right: 30px; /* Adjust the value as needed for your design */
+    margin-left: 0;
+}
+
+
+.error {
+  color: red;
+  font-size: 0.8em;
+  height: 20px; /* Allocate space for error message */
+}
+
+/* Additional styles for dropdown to match the mockup */
+.select-dropdown {
+  position: relative;
+}
+
+.select-dropdown select {
+  appearance: none; /* Hide default arrow */
+  background-image: url("data:image/png;base64,..."); /* Add custom arrow image */
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  padding-right: 30px; /* Ensure text doesn't overlap arrow */
+}
+
+/* Styles for dropdown arrow - using a placeholder image data, replace with actual data URI */
+.select-dropdown::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #000;
+  pointer-events: none;
+}
+
+.entries-container {
+  margin-left: 20px; /* Add some space between the form and the entries */
+  margin-top: 10px;
+}
+
+
+/* Additional table styles */
+.entries-container table {
+  width: 100%; /* Adjust based on your layout */
+  border-collapse: collapse; /* Collapses borders */
+  border: 4px solid #000;
+}
+
+.entries-container th,
+.entries-container td {
+  padding: 8px;
+  text-align: left;
+  border-top: none; /* Ensures no top border */
+  border-bottom: none; /* Ensures no bottom border */
+  border-right: 4px solid #000; /* Apply right border to all cells */
+}
+
+
+th {
+    background-color: #cccccc;
+  }
+  /* Striped table rows */
+  .odd-row {
+    background-color:  #ffffff; /* Correct hex color */
+  }
+  
+  .even-row {
+    background-color:#eeeeee;
+  }
